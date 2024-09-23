@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoll5A.MainPage">
+
+    <ScrollView 
+        BackgroundColor="Beige">
+        <VerticalStackLayout
+            Spacing="25">
+            <Label
+                Text="Gra w kości. Autor: 00000000000" 
+                BackgroundColor="Brown"
+                FontSize="Large"
+                TextColor="White"
+                Padding="5,5"
+                />
+            <Button
+                Text="Rzuć kośćmi" 
+                BackgroundColor="Chocolate"
+                HorizontalOptions="Center"
+                Clicked="RollDice"/>
+            <FlexLayout
+                Direction="Row"
+                BackgroundColor="White">
+                <Image
+                    x:Name="Dice0"
+                    FlexLayout.Basis="20%"
+                    Source="k6_1.png" />
+                <Image
+                    x:Name="Dice1"
+                    FlexLayout.Basis="20%"
+                    Source="k6_1.png" />
+                <Image
+                    x:Name="Dice2"
+                    FlexLayout.Basis="20%"
+                    Source="k6_1.png" />
+                <Image
+                    x:Name="Dice3"
+                    FlexLayout.Basis="20%"
+                    Source="k6_1.png" />
+                <Image
+                    x:Name="Dice4"
+                    FlexLayout.Basis="20%"
+                    Source="k6_1.png" />
+            </FlexLayout>
+            
+            <Label
+                x:Name="RollScoreLabel"
+                Text="Wynik tego losowania: " 
+                HorizontalTextAlignment="Center"/>
+            <Label
+                x:Name="ScoreLabel"
+                Text="Wynik gry: " 
+                HorizontalTextAlignment="Center"/>
+            <Button
+                Text="Resetuj wynik" 
+                BackgroundColor="Chocolate"
+                HorizontalOptions="Center"
+                Clicked="ResetScore"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
